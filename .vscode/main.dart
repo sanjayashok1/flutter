@@ -1,30 +1,32 @@
 void main() {
-  //question no 1
-  String name1 = "Shahzeb";
-  String name2 = "Younus";
-  String name3 = "Arham";
-  String name4 = "Abdullah";
-  List nameList = ["Shahzeb", "Younus", "Arham", "Abdullah"];
-  print(nameList);
-  //question no 2
-  String day1 = "monday";
-  String day2 = "tuesday";
-  String day3 = "wednesday";
-  String day4 = "thursday";
-  String day5 = "friday";
-  String day6 = "saturday";
-  String day7 = "sunday";
-  List daysOfWeekList = [
-    "monay",
-    "tuesday",
-    "wednesday",
-    "thursady",
-    "friday",
-    "saturday",
-    "sunday"
+  // question no 2
+  List<String> usersEligibility = [
+    'John',
+    'Alice',
+    'eligible',
+    'Mike',
+    'Sarah',
+    'Tom'
   ];
-  print(daysOfWeekList[daysOfWeekList.length - 1]);
+  usersEligibility.removeWhere((value) => value == 'eligible');
+  print('Updated list: $usersEligibility');
+  //question no 4
+  List<String> originalList = ["10", "12", "14", "16", "18", "20"];
+  print(originalList);
+  print(originalList.reversed);
   //question no 3
-  List studentData = ["Sanjay", "XII", "322952", "A", "76"];
-  print(studentData);
+  List<int> numbers = [4, 6, 8, 10, 12, 14];
+  int maxValue = numbers.reduce((CurrentMaxValue, numbers) =>
+      numbers > CurrentMaxValue ? numbers : CurrentMaxValue);
+
+  print(maxValue);
+  //question no 5
+  List<int> original = [11, -12, 13, -14, 15, -16, 17, -18];
+  print(original);
+  List<int> filterPositiveNumbers(List<int> nums) {
+    return nums.where((number) => number >= 0).toList();
+  }
+
+  List<int> PositiveNumbers = filterPositiveNumbers(original);
+  print(PositiveNumbers);
 }
