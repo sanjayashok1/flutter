@@ -61,7 +61,6 @@ void main() {
   print(std1["age"]);
   print(std2["name"]);
   print(std2["age"]);
-  // std2.clear();
   print(std2.keys.toList());
   print(std1.length);
   print(std1.isEmpty);
